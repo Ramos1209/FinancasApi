@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gw4mrXtjaMRyt40SpzoXipdFtI2GIRyIXE6iWy6YwZYBSG0RgOkKkg9bK9V/3/8ltM1umMkD9Mxc821ZjEytZw==",
+  "dgSpecHash": "5D/YOfchv6S9xzs3VyO4Jk5EHYkNqUM4nycRPkliYLebsT8fTM5Bq4UdGUvW6XzjKcS9nkuxNpWNssGyqGjNzw==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
+  "projectFilePath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Paulo\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

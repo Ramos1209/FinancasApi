@@ -59,6 +59,32 @@ namespace ControleFinanceiro.DAL.Repository
             }
         }
 
+        public async Task<Usuario> BuscarUsuarioPorEmail(string email)
+        {
+            try
+            {
+                return await _userManager.FindByEmailAsync(email);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+
+        public async Task<IList<string>> PegarFuncoesUsuarios(Usuario usuario)
+        {
+            try
+            {
+                return await _userManager.GetRolesAsync(usuario);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+
         public async Task<int> TotalUsuariosRegistrado()
         {
             try
@@ -71,6 +97,8 @@ namespace ControleFinanceiro.DAL.Repository
                 throw;
             }
         }
+
+        
 
        
     }

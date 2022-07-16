@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ControleFinanceiro.Api.Services;
 using ControleFinanceiro.Api.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -43,7 +44,7 @@ namespace ControleFinanceiro.Api.Controllers
         }
 
         [HttpPost("SalvarFoto")]
-        public async Task<IActionResult> SalvarFoto()
+        public async Task<ActionResult> SalvarFoto()
         {
             var foto = Request.Form.Files[0];
             byte[] b;
@@ -63,8 +64,8 @@ namespace ControleFinanceiro.Api.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> RegistrarUsuario(RegistroViewModels models)
+        [HttpPost("RegistrarUsuario")]
+        public async Task<ActionResult> RegistrarUsuario(RegistroViewModels models)
         {
             if (ModelState.IsValid)
             {
@@ -96,12 +97,14 @@ namespace ControleFinanceiro.Api.Controllers
                 if (criaUsuario.Succeeded)
                 {
                     await _usuarioRepository.IncluirUsuarioEmFuncao(usuario, funcaoUsuario);
+                    var token = TokenService.GerarToken(usuario, funcaoUsuario);
                     await _usuarioRepository.LogarUsuario(usuario, false);
 
                     return Ok(new
                     {
-                        EmailUsuario = usuario.Email,
-                        usuarioId = usuario.Id
+                        EmailUsuarioLogado = usuario.Email,
+                        usuarioId = usuario.Id,
+                        tokenUsuarioLogado = token
                     });
                 }
                 else
@@ -110,6 +113,39 @@ namespace ControleFinanceiro.Api.Controllers
                 }
             }
             return BadRequest(models);
+        }
+
+        [HttpPost("LogarUsuario")]
+
+        public async Task<ActionResult> LogarUsuario(LoginViewModel model)
+        {
+            if (model == null)
+            {
+                return NotFound("Usuario e / ou senhas invalidos");
+            }
+
+            Usuario usuario = await _usuarioRepository.BuscarUsuarioPorEmail(model.Email);
+
+            if (usuario != null)
+            {
+                PasswordHasher<Usuario> pass = new PasswordHasher<Usuario>();
+                if (pass.VerifyHashedPassword(usuario, usuario.PasswordHash, model.Senha) !=
+                    PasswordVerificationResult.Failed)
+                {
+                    var funcaoUsuario = await _usuarioRepository.PegarFuncoesUsuarios(usuario);
+                    var token = TokenService.GerarToken(usuario, funcaoUsuario.First());
+                    await _usuarioRepository.LogarUsuario(usuario, false);
+
+                    return Ok(new
+                    {
+                        EmailUsuarioLogado = usuario.Email,
+                        usuarioId = usuario.Id,
+                        tokenUsuarioLogado = token
+                    });
+                }
+                return NotFound("Usuario e / ou senhas invalidos");
+            }
+            return NotFound("Usuario e / ou senhas invalidos");
         }
 
     }

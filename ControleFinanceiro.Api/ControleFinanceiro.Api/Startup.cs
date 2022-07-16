@@ -1,4 +1,5 @@
 using System.IO;
+using System.Text;
 using ControleFinanceiro.Api.Extensions;
 using ControleFinanceiro.Api.Validation;
 using ControleFinanceiro.Api.ViewModels;
@@ -8,12 +9,14 @@ using ControleFinanceiro.DAL.Interfaces;
 using ControleFinanceiro.DAL.Repository;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ControleFinanceiro.Api
 {
@@ -45,13 +48,34 @@ namespace ControleFinanceiro.Api
             services.AddTransient<IValidator<Categoria>, CategoriaValidator>();
             services.AddTransient<IValidator<FuncaoViewModel>, FuncaoViewModelValidator>();
             services.AddTransient<IValidator<RegistroViewModels>, RegistroViewModelValidator>();
+            services.AddTransient<IValidator<LoginViewModel>, LoginViewModelValidator>();
 
             services.AddCors();
             services.AddSpaStaticFiles(diretorio =>
             {
                 diretorio.RootPath = "ControleFinanceiro-ui";
             });
-            
+
+            var key = Encoding.ASCII.GetBytes(Settings.ChaveSecreta);
+
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(opt =>
+            {
+                opt.RequireHttpsMetadata = false;
+                opt.SaveToken = true;
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+
 
             services.AddControllers()
                 .AddFluentValidation()
@@ -78,9 +102,12 @@ namespace ControleFinanceiro.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseStaticFiles();
+
             app.UseSpaStaticFiles();
 
             app.UseEndpoints(endpoints =>

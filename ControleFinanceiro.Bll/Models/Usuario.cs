@@ -6,6 +6,7 @@ namespace ControleFinanceiro.Bll.Models
     public class Usuario:IdentityUser<string>
     {
         public string Cpf { get; set; }
+        public string Email { get; set; }
 
         public string Profissao { get; set; }
 

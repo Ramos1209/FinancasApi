@@ -8,3 +8,13 @@ D:\Projetos\angular\ControleFinanceiro\ControleFinanceiro.Bll\obj\Debug\netcorea
 D:\Projetos\angular\ControleFinanceiro\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.dll
 D:\Projetos\angular\ControleFinanceiro\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.pdb
 D:\Projetos\angular\ControleFinanceiro\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.csproj.AssemblyReference.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\bin\Debug\netcoreapp3.1\ControleFinanceiro.Bll.deps.json
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\bin\Debug\netcoreapp3.1\ControleFinanceiro.Bll.dll
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\bin\Debug\netcoreapp3.1\ControleFinanceiro.Bll.pdb
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.csproj.AssemblyReference.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.AssemblyInfoInputs.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.AssemblyInfo.cs
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.csproj.CoreCompileInputs.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.dll
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Bll\obj\Debug\netcoreapp3.1\ControleFinanceiro.Bll.pdb

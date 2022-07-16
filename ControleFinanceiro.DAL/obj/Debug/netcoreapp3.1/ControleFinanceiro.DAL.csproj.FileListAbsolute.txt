@@ -30,3 +30,19 @@ D:\Projetos\angular\ControleFinanceiro\Financeiro\src\ControleFinanceiro.DAL\obj
 D:\Projetos\angular\ControleFinanceiro\Financeiro\src\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.dll
 D:\Projetos\angular\ControleFinanceiro\Financeiro\src\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.pdb
 D:\Projetos\angular\ControleFinanceiro\Financeiro\src\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.genruntimeconfig.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.DAL.deps.json
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.DAL.runtimeconfig.json
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.DAL.runtimeconfig.dev.json
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.DAL.dll
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.DAL.pdb
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.Bll.dll
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\bin\Debug\netcoreapp3.1\ControleFinanceiro.Bll.pdb
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.csproj.AssemblyReference.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.AssemblyInfoInputs.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.AssemblyInfo.cs
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.csproj.CoreCompileInputs.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.csproj.CopyComplete
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.dll
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.pdb
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.DAL\obj\Debug\netcoreapp3.1\ControleFinanceiro.DAL.genruntimeconfig.cache

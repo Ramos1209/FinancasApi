@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {}
+    "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {
+    "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
+        "projectUniqueName": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
         "projectName": "ControleFinanceiro.Bll",
-        "projectPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
+        "projectPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj",
         "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\obj\\",
+        "outputPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

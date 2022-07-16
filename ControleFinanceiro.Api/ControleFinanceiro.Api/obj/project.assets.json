@@ -98,6 +98,21 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.25": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.25": {
         "type": "package",
         "compile": {
@@ -1076,6 +1091,15 @@
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
         }
       },
+      "Microsoft.IdentityModel.Abstractions/6.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll": {}
+        }
+      },
       "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
         "type": "package",
         "dependencies": {
@@ -1089,8 +1113,11 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Logging/5.5.0": {
+      "Microsoft.IdentityModel.Logging/6.21.0": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.21.0"
+        },
         "compile": {
           "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
         },
@@ -1125,11 +1152,11 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
         }
       },
-      "Microsoft.IdentityModel.Tokens/5.5.0": {
+      "Microsoft.IdentityModel.Tokens/6.21.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "5.5.0",
-          "Newtonsoft.Json": "10.0.1",
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.IdentityModel.Logging": "6.21.0",
           "System.Security.Cryptography.Cng": "4.5.0"
         },
         "compile": {
@@ -3250,6 +3277,21 @@
         "microsoft.aspnetcore.authentication.core.nuspec"
       ]
     },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.25": {
+      "sha512": "yBycwuC2XcHBB8twbgIcP970UHY5D9KzlqBcr+7qK3RcH7ngqGo3g6LlCxlJkJyoKnaQUklO4kdDkzDVyPOZMw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.3.1.25.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.25": {
       "sha512": "g5R4WmzGjQ2CxCk47CuviZLhDmV2q2/PP4VBAzd+ahRvhsIfZrk9DNckWeMRzz44JFUIhhz02yWlZvLiXgKzKQ==",
       "type": "package",
@@ -4419,6 +4461,27 @@
         "ref/xamarinmac20/Microsoft.Identity.Client.xml"
       ]
     },
+    "Microsoft.IdentityModel.Abstractions/6.21.0": {
+      "sha512": "XeE6LQtD719Qs2IG7HDi1TSw9LIkDbJ33xFiOBoHbApVw/8GpIBCbW+t7RwOjErUDyXZvjhZliwRkkLb8Z1uzg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/6.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net45/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.6.21.0.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
     "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
       "sha512": "cT9SCW/dN+ulrvAtbh37c36DR6aArENH3S4UtFmvXRx+VGC0ArDgzRaEbEh+ChS4koxdl2oS691250iZhgKvwg==",
       "type": "package",
@@ -4440,24 +4503,24 @@
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/5.5.0": {
-      "sha512": "1w/Hz/7+al+ugQn+6y0tAPmpN8U0u1aBtl1QXYCVkiJfbCC4tgyroFOuhdztOq48rgeM+3JW9bGqOtkfVurW8w==",
+    "Microsoft.IdentityModel.Logging/6.21.0": {
+      "sha512": "tuEhHIQwvBEhMf8I50hy8FHmRSUkffDFP5EdLsSDV4qRcl2wvOPkQxYqEzWkh+ytW6sbdJGEXElGhmhDfAxAKg==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/5.5.0",
+      "path": "microsoft.identitymodel.logging/6.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Microsoft.IdentityModel.Logging.dll",
         "lib/net45/Microsoft.IdentityModel.Logging.xml",
-        "lib/net451/Microsoft.IdentityModel.Logging.dll",
-        "lib/net451/Microsoft.IdentityModel.Logging.xml",
         "lib/net461/Microsoft.IdentityModel.Logging.dll",
         "lib/net461/Microsoft.IdentityModel.Logging.xml",
-        "lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll",
-        "lib/netstandard1.4/Microsoft.IdentityModel.Logging.xml",
+        "lib/net472/Microsoft.IdentityModel.Logging.dll",
+        "lib/net472/Microsoft.IdentityModel.Logging.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.logging.6.21.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
@@ -4503,24 +4566,24 @@
         "microsoft.identitymodel.protocols.openidconnect.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/5.5.0": {
-      "sha512": "cu1klZiuCwVYbXHs0QdnseuoRGG1/85VX9d1Sk0vbJlKp+HJUN/4pAS/fe2m9bTOYyIPdeCHeksMiVHgo1EfAA==",
+    "Microsoft.IdentityModel.Tokens/6.21.0": {
+      "sha512": "AAEHZvZyb597a+QJSmtxH3n2P1nIJGpZ4Q89GTenknRx6T6zyfzf592yW/jA5e8EHN4tNMjjXHQaYWEq5+L05w==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/5.5.0",
+      "path": "microsoft.identitymodel.tokens/6.21.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/Microsoft.IdentityModel.Tokens.dll",
         "lib/net45/Microsoft.IdentityModel.Tokens.xml",
-        "lib/net451/Microsoft.IdentityModel.Tokens.dll",
-        "lib/net451/Microsoft.IdentityModel.Tokens.xml",
         "lib/net461/Microsoft.IdentityModel.Tokens.dll",
         "lib/net461/Microsoft.IdentityModel.Tokens.xml",
-        "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll",
-        "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net472/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net472/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.tokens.6.21.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
@@ -9677,12 +9740,14 @@
       "ControleFinanceiro.Bll >= 1.0.0",
       "ControleFinanceiro.DAL >= 1.0.0",
       "FluentValidation.AspNetCore >= 9.5.1",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.25",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.25",
       "Microsoft.AspNetCore.SpaServices.Extensions >= 3.1.25",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.25",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.25",
       "Microsoft.Extensions.Identity.Stores >= 3.1.25",
+      "Microsoft.IdentityModel.Tokens >= 6.21.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5"
     ]
   },
@@ -9694,11 +9759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
+      "projectUniqueName": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
       "projectName": "ControleFinanceiro.Api",
-      "projectPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
+      "projectPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
       "packagesPath": "C:\\Users\\Paulo\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\obj\\",
+      "outputPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Api\\ControleFinanceiro.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -9719,11 +9784,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {
-              "projectPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj"
+            "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj": {
+              "projectPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.Bll\\ControleFinanceiro.Bll.csproj"
             },
-            "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.DAL\\ControleFinanceiro.DAL.csproj": {
-              "projectPath": "D:\\Projetos\\angular\\ControleFinanceiro\\Financeiro\\src\\ControleFinanceiro.DAL\\ControleFinanceiro.DAL.csproj"
+            "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.DAL\\ControleFinanceiro.DAL.csproj": {
+              "projectPath": "D:\\Projetos\\Pojetos MVC\\FinaceiroApi\\ControleFinanceiro.DAL\\ControleFinanceiro.DAL.csproj"
             }
           }
         }
@@ -9741,6 +9806,10 @@
           "FluentValidation.AspNetCore": {
             "target": "Package",
             "version": "[9.5.1, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[3.1.25, )"
           },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
@@ -9769,6 +9838,10 @@
           "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",
             "version": "[3.1.25, )"
+          },
+          "Microsoft.IdentityModel.Tokens": {
+            "target": "Package",
+            "version": "[6.21.0, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
