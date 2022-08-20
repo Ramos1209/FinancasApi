@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ControleFinanceiro.Api.Services;
+using ControleFinanceiro.Api.ViewModels;
+using ControleFinanceiro.Bll.Models;
+using ControleFinanceiro.DAL.Interfaces;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using ControleFinanceiro.Api.Services;
-using ControleFinanceiro.Api.ViewModels;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ControleFinanceiro.Bll.Models;
-using ControleFinanceiro.DAL;
-using ControleFinanceiro.DAL.Interfaces;
-using Microsoft.AspNetCore.Identity;
 
 namespace ControleFinanceiro.Api.Controllers
 {
@@ -31,7 +26,7 @@ namespace ControleFinanceiro.Api.Controllers
 
         // GET: api/Usuarios/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(string id)
+        public async Task<ActionResult<AtualizarUsuarioViewModel>> GetUsuario(string id)
         {
             var usuario = await _usuarioRepository.GetById(id);
 
@@ -40,7 +35,17 @@ namespace ControleFinanceiro.Api.Controllers
                 return NotFound();
             }
 
-            return usuario;
+            AtualizarUsuarioViewModel model = new AtualizarUsuarioViewModel
+            {
+                Id = usuario.Id,
+                UserName = usuario.UserName,
+                Email = usuario.Email,
+                CPF = usuario.Cpf,
+                Profissao = usuario.Profissao,
+                Foto = usuario.Foto
+            };
+
+            return model;
         }
 
         [HttpPost("SalvarFoto")]
@@ -148,5 +153,35 @@ namespace ControleFinanceiro.Api.Controllers
             return NotFound("Usuario e / ou senhas invalidos");
         }
 
+
+        [HttpGet("RetornaFotoUsuario/{usuarioId")]
+        public async Task<dynamic> RetornaFotoUsuario(string usuarioId)
+        {
+            Usuario usuario = await _usuarioRepository.GetById(usuarioId);
+
+            return new { imagem = usuario.Foto };
+        }
+
+        [HttpPut("AtualizarUsuario")]
+        public async Task<ActionResult> AtualizarUsuario(AtualizarUsuarioViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                Usuario usuario = await _usuarioRepository.GetById(model.Id);
+                usuario.UserName = model.UserName;
+                usuario.Email = model.Email;
+                usuario.Cpf = model.CPF;
+                usuario.Profissao = model.Profissao;
+                usuario.Foto = model.Foto;
+
+                await _usuarioRepository.AtualizaUsuario(usuario);
+                return Ok(new
+                {
+                    mensagem = $"Usuario {usuario.Email} atualizado com sucesso"
+                });
+            }
+
+            return BadRequest(model);
+        }
     }
 }

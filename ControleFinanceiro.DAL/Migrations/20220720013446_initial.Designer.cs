@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleFinanceiro.DAL.Migrations
 {
     [DbContext(typeof(FinanceiroContext))]
-    [Migration("20220630011156_criacaotabelas")]
-    partial class criacaotabelas
+    [Migration("20220720013446_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.0")
+                .HasAnnotation("ProductVersion", "3.1.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -159,16 +159,16 @@ namespace ControleFinanceiro.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7e4e32e5-cdca-44ba-93bc-a997ea2bb05b",
-                            ConcurrencyStamp = "d2353052-f436-4173-b0c8-c61e4ed09686",
+                            Id = "361c89e9-b212-488c-9bfd-1c8cabd48905",
+                            ConcurrencyStamp = "69c0e4ff-db5f-4ebc-bcf6-e8af200a0cef",
                             Descricao = "Administrador do sistema",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "6659d366-697c-464a-bd08-90a30f0024f4",
-                            ConcurrencyStamp = "9761cf6b-da77-4b4d-8126-232547daba9e",
+                            Id = "c7899c86-7c8a-4a9e-b7c4-78ed5a5d2a99",
+                            ConcurrencyStamp = "99da2674-62cc-4fe2-a355-1732058cce9f",
                             Descricao = "Usuário do sistema",
                             Name = "Usuario",
                             NormalizedName = "USUARIO"

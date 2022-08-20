@@ -40,15 +40,25 @@ namespace ControleFinanceiro.Api
 
             services.ConfigurarSenhaUsuario();
 
+            services.AddScoped<ICartaoRepository, CartaoRepository>();
             services.AddScoped<ICategoriaRpository, CategoriaRpository>();
+            services.AddScoped<IDespesasRepository, DespesasRepository>();
             services.AddScoped<ITipoRepository, TipoRepository>();
             services.AddScoped<IFuncaoRepository, FuncaoRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IMesRepository, MesRepository>();
+            services.AddScoped<IGanhosRepository, GanhosRepository>();
+
 
             services.AddTransient<IValidator<Categoria>, CategoriaValidator>();
             services.AddTransient<IValidator<FuncaoViewModel>, FuncaoViewModelValidator>();
             services.AddTransient<IValidator<RegistroViewModels>, RegistroViewModelValidator>();
             services.AddTransient<IValidator<LoginViewModel>, LoginViewModelValidator>();
+            services.AddTransient<IValidator<AtualizarUsuarioViewModel>, AtualizarUsuarioViewModelValidator>();
+            services.AddTransient<IValidator<Cartao>, CartaoValidator>();
+            services.AddTransient<IValidator<Despesa>, DespesasValidator>();
+            services.AddTransient<IValidator<Ganho>, GanhosValidator>();
+       
 
             services.AddCors();
             services.AddSpaStaticFiles(diretorio =>
@@ -74,7 +84,6 @@ namespace ControleFinanceiro.Api
                     ValidateAudience = false
                 };
             });
-
 
 
             services.AddControllers()

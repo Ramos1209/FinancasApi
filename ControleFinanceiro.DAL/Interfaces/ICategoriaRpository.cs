@@ -11,5 +11,6 @@ namespace ControleFinanceiro.DAL.Interfaces
 
       IQueryable<Categoria> FiltrarCategorias(string nome);
 
-  }
+      IQueryable<Categoria> PegarCategoriaPeloTipo(string tipo);
+    }
 }

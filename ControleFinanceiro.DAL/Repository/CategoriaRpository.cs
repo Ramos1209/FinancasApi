@@ -55,5 +55,18 @@ namespace ControleFinanceiro.DAL.Repository
                 throw;
             }
         }
-   }
+
+        public IQueryable<Categoria> PegarCategoriaPeloTipo(string tipo)
+        {
+            try
+            {
+                return _context.Categorias.Include(c => c.Tipo).Where(c => c.Tipo.Nome == tipo);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+        }
+    }
 }

@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace ControleFinanceiro.Api.Controllers
 {
-    [Authorize]
+   
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize(Roles = "Administrador")]
     public class TiposController : ControllerBase
     {
         private readonly ITipoRepository _tipoRepository;

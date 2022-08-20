@@ -10,7 +10,7 @@ namespace ControleFinanceiro.Api.Validation
             RuleFor(c => c.Nome)
                 .NotNull().WithMessage("Preencha o nome")
                 .NotEmpty().WithMessage("Preencha o nome")
-                .MinimumLength(6).WithMessage("Use mais caracteres")
+                .MinimumLength(3).WithMessage("Use mais caracteres")
                 .MaximumLength(50).WithMessage("Use menos caracteres");
 
             RuleFor(c => c.Icone)

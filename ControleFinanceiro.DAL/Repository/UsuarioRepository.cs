@@ -98,8 +98,17 @@ namespace ControleFinanceiro.DAL.Repository
             }
         }
 
-        
-
-       
+        public async Task AtualizaUsuario(Usuario usuario)
+        {
+            try
+            {
+                await _userManager.UpdateAsync(usuario);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
