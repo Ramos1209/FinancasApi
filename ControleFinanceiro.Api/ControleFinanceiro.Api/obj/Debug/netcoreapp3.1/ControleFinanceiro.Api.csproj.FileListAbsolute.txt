@@ -470,10 +470,9 @@ D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.A
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\staticwebassets\ControleFinanceiro.Api.StaticWebAssets.Manifest.cache
-D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\staticwebassets\ControleFinanceiro.Api.StaticWebAssets.xml
-D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\scopedcss\bundle\ControleFinanceiro.Api.styles.css
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.RazorTargetAssemblyInfo.cache
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.csproj.CopyComplete
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.dll
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.pdb
 D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\obj\Debug\netcoreapp3.1\ControleFinanceiro.Api.genruntimeconfig.cache
+D:\Projetos\Pojetos MVC\FinaceiroApi\ControleFinanceiro.Api\ControleFinanceiro.Api\bin\Debug\netcoreapp3.1\ControleFinanceiro.Api.StaticWebAssets.xml

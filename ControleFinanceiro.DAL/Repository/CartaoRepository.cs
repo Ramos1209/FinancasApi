@@ -3,6 +3,7 @@ using ControleFinanceiro.DAL.Interfaces;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleFinanceiro.DAL.Repository
 {
@@ -33,9 +34,17 @@ namespace ControleFinanceiro.DAL.Repository
             return _context.Cartoes.Where(c => c.Numero.Contains(numeroCartao));
         }
 
-        public Task<int> PegarQuantidadeCartoesPeloUsuarioId(string usuarioId)
+        public async  Task<int> PegarQuantidadeCartoesPeloUsuarioId(string usuarioId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _context.Cartoes.CountAsync(c => c.UsuarioId == usuarioId);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

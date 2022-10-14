@@ -21,7 +21,6 @@ namespace ControleFinanceiro.Api.Controllers
             _usuarioRepository = usuarioRepository;
           
         }
-
       
 
         // GET: api/Usuarios/5
@@ -154,11 +153,10 @@ namespace ControleFinanceiro.Api.Controllers
         }
 
 
-        [HttpGet("RetornaFotoUsuario/{usuarioId")]
+        [HttpGet("RetornaFotoUsuario/{usuarioId}")]
         public async Task<dynamic> RetornaFotoUsuario(string usuarioId)
         {
             Usuario usuario = await _usuarioRepository.GetById(usuarioId);
-
             return new { imagem = usuario.Foto };
         }
 
